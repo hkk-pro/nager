@@ -10,7 +10,7 @@ export default function NavBar() {
         <Nav className="mr-auto">
           <Nav.Link href="#home">Countries</Nav.Link>
         </Nav>
-        <Nav inline>
+        <Nav>
           <Nav.Link href="https://github.com/arcevit/nager">
             <i className="fab fa-github"></i> Github
           </Nav.Link>
