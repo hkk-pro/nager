@@ -9,13 +9,16 @@ function CountryProvider(props) {
 
   useEffect(() => {
     fetchData();
-    setLoading(false);
   }, []);
 
   const fetchData = async () => {
     try {
       let countryNames = await axios.get('/AvailableCountries');
+      console.log(countryNames)
       setCountries(countryNames.data);
+      setLoading(false);
+      
+
     } catch (error) {
       console.log(error);
     }
