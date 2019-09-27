@@ -8,19 +8,18 @@ function CountryProvider(props) {
   const [inputValue, setInputValue] = useState('');
 
   useEffect(() => {
-    async function fetchData() {
-      try {
-        let countryNames = await axios.get('/AvailableCountries').then(res => {
-          return res.data;
-        });
-        setCountries(countryNames);
-        setLoading(false);
-      } catch (error) {
-        console.log(error);
-      }
-    }
     fetchData();
+    setLoading(false);
   }, []);
+
+  const fetchData = async () => {
+    try {
+      let countryNames = await axios.get('/AvailableCountries');
+      setCountries(countryNames.data);
+    } catch (error) {
+      console.log(error);
+    }
+  };
 
   const handleInput = e => {
     setInputValue(e.target.value);
