@@ -14,7 +14,7 @@ function CountryProvider(props) {
 
   const fetchData = async () => {
     try {
-      let countryNames = await axios.get('/AvailableCountries');
+      let countryNames = await axios.get('https://date.nager.at/Api/v2/AvailableCountries');
       setCountries(countryNames.data);
     } catch (error) {
       console.log(error);
