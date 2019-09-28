@@ -15,7 +15,6 @@ function CountryProvider(props) {
   const fetchData = async () => {
     try {
       let countryNames = await axios.get('/AvailableCountries');
-      console.log(countryNames)
       setCountries(countryNames.data);
     } catch (error) {
       console.log(error);

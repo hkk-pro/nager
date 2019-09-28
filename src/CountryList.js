@@ -11,8 +11,6 @@ export default function CountryList() {
       country.key.toLowerCase().includes(search)
     );
   });
-  console.log('filteredCountries:',filteredCountries)
-  console.log('Countries:',countries)
 
   return (
     <>
