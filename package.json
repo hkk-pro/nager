@@ -13,7 +13,7 @@
     "react-scripts": "3.1.2"
   },
   "scripts": {
-    "start": "react-scripts start",
+    "start": "react-scripts start --proxy-config proxyconfig.json",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
