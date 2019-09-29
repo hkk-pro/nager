@@ -1,7 +1,0 @@
-{
-"/AvailableCountries":{
-    "target":"https://date.nager.at/Api/v2",
-      "secure":false,
-      "changeOrigin":true
-}
-}

@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
+
 const CountryContext = React.createContext();
 
 function CountryProvider(props) {
@@ -8,11 +9,11 @@ function CountryProvider(props) {
   const [inputValue, setInputValue] = useState('');
 
   useEffect(() => {
-    fetchData();
+    fetchCountries();
     setLoading(false);
   }, []);
 
-  const fetchData = async () => {
+  let fetchCountries = async () => {
     try {
       let countryNames = await axios.get('/AvailableCountries');
       setCountries(countryNames.data);
