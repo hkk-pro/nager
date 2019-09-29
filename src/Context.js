@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
+axios.defaults.proxy = "https://date.nager.at/Api/v2";
+console.log(axios.defaults.proxy)
 
 const CountryContext = React.createContext();
 
@@ -14,6 +16,7 @@ function CountryProvider(props) {
   }, []);
 
   let fetchCountries = async () => {
+    
     try {
       let countryNames = await axios.get('/AvailableCountries');
       setCountries(countryNames.data);
